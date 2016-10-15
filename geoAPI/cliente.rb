@@ -1,6 +1,6 @@
 class Cliente
 	def getClientByPhone(phoneNumber)
-		conn = PG.connect(dbname: 'gistmx', user: 'postgres', password: 'Razeone%88', host: '127.0.0.1')
+		conn = PG.connect(dbname: 'gistmx', user: 'postgres', password: '', host: '127.0.0.1')
 		query = "SELECT * from clientes WHERE telefono='" + phoneNumber + "'"
 		conn.exec(query) do |result|
 	        for row in result
